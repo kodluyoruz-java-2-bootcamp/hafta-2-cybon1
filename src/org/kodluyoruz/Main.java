@@ -3,17 +3,15 @@ package org.kodluyoruz;
 public class Main
 {
 
-    // TODO Bu sınıftaki kodları değiştirmeyin.
-    // Öncelikle diğer sınıflarda belirtilen kodları yazın.
-    // Daha sonra bu sınıftaki kodlara konulan yorum satırlarını kaldırın ve main metodunu çalıştırın.
+
 
     public static void main(String[] args)
     {
-        // testComputer1();
-        // testComputer2();
+        testComputer1();
+        testComputer2();
     }
 
-    /*
+
     private static void testComputer1()
     {
         Computer computer = new Computer();
@@ -45,7 +43,7 @@ public class Main
         gpu.setPower(200);
         gpu.setPrice(3499.0);
         gpu.setMemory(8);
-        gpu.setBits(192);
+        gpu.setBits();
 
         SSD ssd = new SSD();
         ssd.setBrand("Samsung");
@@ -105,7 +103,7 @@ public class Main
         gpu.setPower(190);
         gpu.setPrice(4499.90);
         gpu.setMemory(8);
-        gpu.setBits(256);
+        gpu.setBits();
 
         SSD ssd = new SSD();
         ssd.setBrand("Sandisk");
@@ -133,6 +131,6 @@ public class Main
             throw new RuntimeException(String.format("Güç tüketimi hesaplama metodunuz yanlış! Beklenen: %d Çıkan: %d", estimatedTotalPower, totalPower));
         }
     }
-    */
+
 
 }
