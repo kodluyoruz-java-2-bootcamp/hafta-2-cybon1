@@ -1,22 +1,40 @@
 package org.kodluyoruz;
 
-/**
- * Bu sınıf bir ekran kartını temsil eder.
- * TODO Bu sınıfı Hardware sınıfının alt sınıfı haline getirin.
- *
- * Her ekran kartının Hardware sınıfındakilere ek olarak 2 özelliği vardır:
- *      - Hafıza boyutu (memory) (int türünde) Örnek: 4 GB, 8 GB vs.
- *      - Renk skalası (bits) (int türünde) Örnek: 128 bits, 256 bits vs.
- *
- * TODO Bu 2 özellik ve bunların metotları için gereken kodları bu sınıfın içine yazın
- */
-public class GPU
-{
 
-    /*
-     * Eğer ekran kartının hafızası 8 GB'tan fazlaysa, her 2 GB için fiyatı 250 TL artar.
-     * Eğer ekran kartının renk skalası 128 bits'ten fazlaysa, her 64 bits için fiyatı 400 TL artar.
-     * TODO buna göre Hardware sınıfındaki fiyat hesaplayan metodu bu sınıfta yeniden yazın
-     */
+
+   class Gpu extends Hardware{
+    public int memory;
+    public int bit;
+   }
+
+public class GPU<bit, Bits>
+{
+    public void setBrand(String amd) {
+    }
+
+    public void setPower(int i) {
+    }
+
+    public void setPrice(double v) {
+    }
+
+    public void setMemory(int i) {
+        int memory =8;
+        if(memory>=8)
+
+            System.out.println("Her 2 gb fiyat\u0131 250 Tl Artar");
+    }
+
+    public void setBits() {
+
+        int i = 128;
+        if (i>=128) {
+
+
+            System.out.println("her 64 bits için fiyatı 400 TL artar");
+        }
+    }
+
+
 
 }

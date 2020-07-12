@@ -1,57 +1,77 @@
 package org.kodluyoruz;
 
-/**
- * Bu sınıf bir bilgisayarı temsil eder.
- * Bilgisayarın beş adet donamımı vardır:
- *      - Anakart
- *      - CPU
- *      - RAM
- *      - SSD
- *      - Ekran kartı
- *
- * TODO Bu alanların getter ve setter metotlarını oluşturun.
- */
+
 public class Computer
 {
 
-    /**
-     * anakart
-     */
-    private Hardware motherboard;
 
-    /**
-     * işlemci
-     */
-    private Hardware cpu;
+    private Motherboard motherboard;
 
-    /**
-     * RAM
-     */
-    private Hardware ram;
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
 
-    /**
-     * SSD
-     * İsteğe bağlı: Her bilgisayarda SSD olmayabilir
-     */
-    private Hardware ssd;
+    public void setMotherboard(Motherboard motherboard) {
+        this.motherboard = motherboard;
+    }
 
-    /**
-     * ekran kartı
-     * İsteğe bağlı: Her bilgisayarda ekran kartı olmayabilir
-     */
-    private Hardware gpu;
+
+    private CPU cpu;
+
+    public CPU getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(CPU cpu) {
+        this.cpu = cpu;
+    }
+
+
+    private RAM ram;
+
+    public RAM getRam() {
+        return ram;
+    }
+
+    public void setRam(RAM ram) {
+        this.ram = ram;
+    }
+
+
+    private SSD ssd;
+
+    public SSD getSsd() {
+        return ssd;
+    }
+
+    public void setSsd(SSD ssd) {
+        this.ssd = ssd;
+    }
+
+    
+    private GPU gpu;
+
+    public GPU getGpu() {
+        return gpu;
+    }
+
+    public void setGpu(GPU gpu) {
+        this.gpu = gpu;
+    }
 
     public double getTotalPrice()
     {
-        // Bu metot bilgisayarın donanımlarına bakarak toplam fiyatını hesaplar.
-        // TODO metodu doldurun
+
+
         return 0.0;
     }
 
     public int getTotalPower()
     {
-        // Bu metot bilgisayarın donanımlarına bakarak toplamda ne kadar güç tüketeceğini hesaplar.
-        // TODO metodu doldurun
+
+
+
+
         return 0;
     }
 
