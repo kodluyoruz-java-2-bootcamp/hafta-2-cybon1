@@ -62,17 +62,17 @@ public class Computer
     public double getTotalPrice()
     {
 
-
-        return 0.0;
+       return motherboard.getPrice()+cpu.getPrice()+ram.getPrice()+ssd.getPrice()+gpu.getPrice();
+        
     }
 
     public int getTotalPower()
     {
 
 
+          return motherboard.getPower()+cpu.getPower()+ram.getPower()+ssd.getPower()+gpu.getPower();
 
-
-        return 0;
+        
     }
 
 }

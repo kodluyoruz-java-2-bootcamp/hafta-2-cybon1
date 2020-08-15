@@ -2,19 +2,31 @@ package org.kodluyoruz;
 
 
 public class SSD extends  Hardware
+
 {
-    public void setBrand(String samsung) {
+    private int memory;
+
+
+    @Override
+    public void setPrice(double price) {
+        if(this.memory>750){
+            price += (((this.memory - 750) / 250) * 275);
+        }
+        this.price=price;
     }
 
-    public void setPower(int i) {
+    @Override
+    public double getPrice() {
+        setPrice(this.price);
+        return this.price;
     }
 
-    public void setPrice(double v) {
+    public int getMemory() {
+        return memory;
     }
 
-    public void setMemory(int i) {
+    public void setMemory(int memory) {
+        this.memory = memory;
     }
-
-
-
 }
+© 2020 GitHub, Inc.

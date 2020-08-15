@@ -1,28 +1,40 @@
 package org.kodluyoruz;
 
 
-public class CPU
+public class CPU extends Hardware
 {
-    public void setBrand(String amd) {
+    private int cores;
+    private int threads;
+
+
+
+
+    @Override
+    public void setPrice(double price) {
+        if(cores>=6){
+            price += (price * 0.3);
+        }
+        this.price=price;
     }
 
-    public void setPower(int i) {
+    @Override
+    public double getPrice() {
+        setPrice(this.price);
+        return this.price;
+    }
+    public int getCores() {
+        return cores;
     }
 
-    public void setPrice(double v) {
+    public void setCores(int cores) {
+        this.cores = cores;
     }
 
-    public void setCores(int i) {
-        int cores=6;
-        if(cores>=6)
-
-            System.out.println("%30 artar");
+    public int getThreads() {
+        return threads;
     }
 
-    public void setThreads(int i) {
+    public void setThreads(int threads) {
+        this.threads = threads;
     }
-
-
-
-
 }

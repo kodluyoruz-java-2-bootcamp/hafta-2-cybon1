@@ -7,34 +7,36 @@ package org.kodluyoruz;
     public int bit;
    }
 
-public class GPU<bit, Bits>
-{
-    public void setBrand(String amd) {
-    }
-
-    public void setPower(int i) {
-    }
-
-    public void setPrice(double v) {
-    }
-
-    public void setMemory(int i) {
-        int memory =8;
-        if(memory>=8)
-
-            System.out.println("Her 2 gb fiyat\u0131 250 Tl Artar");
-    }
-
-    public void setBits() {
-
-        int i = 128;
-        if (i>=128) {
-
-
-            System.out.println("her 64 bits için fiyatı 400 TL artar");
+@Override
+    public void setPrice(double price) {
+        if(this.memory>8){
+            price += (((this.memory - 8) / 2) * 250);
         }
+        if(this.bits>128){
+            price += (((this.bits - 128) / 64) * 400);
+        }
+        this.price=price;
     }
 
+    @Override
+    public double getPrice() {
+        setPrice(this.price);
+        return this.price;
+    }
 
+    public int getMemory() {
+        return memory;
+    }
 
+    public void setMemory(int memory) {
+        this.memory = memory;
+    }
+
+    public int getBits() {
+        return bits;
+    }
+
+    public void setBits(int bits) {
+        this.bits = bits;
+    }
 }

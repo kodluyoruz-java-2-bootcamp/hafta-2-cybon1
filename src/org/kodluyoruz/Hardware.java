@@ -1,24 +1,34 @@
 package org.kodluyoruz;
 
-public  class Hardware extends CPU{
-   public int cores;
-   public int threads;
+public abstract class Hardware{
 
-    public int getThreads() {
-        return threads;
+
+    protected String brand;
+    protected double price;
+    protected int power;
+
+
+    public String getBrand() {
+        return brand;
     }
 
-    @Override
-    public void setThreads(int threads) {
-        this.threads = threads;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public int getCores() {
-     return cores;
- }
+    public double getPrice() {
+        return price;
+    }
 
- @Override
- public void setCores(int cores) {
-     this.cores = cores;
- }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
 }
